@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div id="nav">
+            <a href="#Log-in">Đăng nhập</a>
+            <a href="#sign-up">Đăng kí</a>
+            <a href="#del-acc">Xóa tài khoản</a>
+            <a href="#fix-acc">Chỉnh sửa thông tin</a>
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="back"></div>
+        <div class="Log-in">
+          <div class="content">
+    
+            <h2>Welcome</h2>
+            <h3>to our new website</h3>
+    
+            <div class="icon">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+        </div>
+        <form onsubmit="signIn()">
+            <div class="home">
+                <!-- <div class="account">
+                    <h2>Create account</h2>
+                </div> -->
+                <div class="input1">
+    
+                    <!-- <i class="fa-solid fa-envelope"></i> -->
+                    <input id="username" type="email"  class="input-mail" autocomplete="off" required placeholder="Username">
+                    <!-- <label for="input"> Username </label> -->
+    
+                </div>
+                <div class="input2">
+    
+                    <!-- <i class="fa-solid fa-lock"></i> -->
+                    <input id="password" type="password"  class="input-mail" autocomplete="off" required placeholder="Password">
+                    <!-- <label for="input"> Password </label> -->
+    
+                </div>
+                <div class="input">
+                    <input type="submit" class="button" value="Log In">
+    
+        </form>
+    
+        </div>
+    </div>
+   
+    <div id="sign-up"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
