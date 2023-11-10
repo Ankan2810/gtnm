@@ -83,8 +83,38 @@
 			                    <li class="smooth-menu"><a href="#experience">experience</a></li>
 			                    <li class="smooth-menu"><a href="#profiles">profile</a></li>
 			                    <li class="smooth-menu"><a href="#portfolio">portfolio</a></li>
-			                    <li class="smooth-menu"><a href="#clients">clients</a></li>
 			                    <li class="smooth-menu"><a href="#contact">contact</a></li>
+
+								<div class="dropdown">
+									<button onclick="myFunction()" class="dropbtn">Lab 4</button>
+									<div id="myDropdown" class="dropdown-content">
+										<a href="#lab">Requirement</a>
+										<a href="https://www.figma.com/file/RJHS4ZoJZZ2Ipb9PAo0Ciu/Untitled?type=design&node-id=0%3A1&mode=design&t=epNjqXlkUXnhbaI3-1" >Design</a>
+									</div>
+								</div>
+											
+								<script>
+												/* When the user clicks on the button, 
+												toggle between hiding and showing the dropdown content */
+												function myFunction() {
+												  document.getElementById("myDropdown").classList.toggle("show");
+												}
+												
+												// Close the dropdown if the user clicks outside of it
+												window.onclick = function(event) {
+												  if (!event.target.matches('.dropbtn')) {
+													var dropdowns = document.getElementsByClassName("dropdown-content");
+													var i;
+													for (i = 0; i < dropdowns.length; i++) {
+													  var openDropdown = dropdowns[i];
+													  if (openDropdown.classList.contains('show')) {
+														openDropdown.classList.remove('show');
+													  }
+													}
+												  }
+												}
+												</script>
+
 			                </ul><!--/.nav -->
 			            </div><!-- /.navbar-collapse -->
 			        </div><!--/.container-->
@@ -767,57 +797,7 @@
 		</section><!--/.portfolio-->
 		<!--portfolio end -->
 
-		<!--clients start -->
-		<section id="clients" class="clients">
-			<div class="section-heading text-center">
-				<h2>clients</h2>
-			</div>
-			<div class="clients-area">
-				<div class="container">
-					<div class="owl-carousel owl-theme" id="client">
-						<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c1.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c2.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c3.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c4.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c5.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c6.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="#">
-								<img src="assets/images/clients/c7.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-					</div><!--/.owl-carousel-->
-				</div><!--/.container-->
-			</div><!--/.clients-area-->
 
-		</section><!--/.clients-->
-
-		</section><!--/.clients-->
-		<!--clients end -->
 
 		<!--contact start -->
 		<section id="contact" class="contact">
@@ -904,6 +884,41 @@
 		</section><!--/.contact-->
 		<!--contact end -->
 
+		<!--lab start -->
+		<section id="lab" class="lab">
+			<div class="container">
+				<div class="about-content">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="single-about-txt">
+								<h3>
+									Requirement
+								</h3>
+								<p>
+									Chọn 1 đối tượng bất kỳ trong thế giới thực, ví dụ như lớp môn học, giảng viên,… Sau đó thiết kế chức năng Quản lý đối tượng đó trên html bao gồm các tính năng thêm, sửa, xóa, tìm kiếm cho đối tượng đó. Ví dụ, làm chức năng Quản lý Sinh viên, bao gôm tính năng thêm, sửa, xóa, tìm kiếm.
+								<div class="row">
+									<div class="col-sm-4">
+										
+									</div>
+									<div class="col-sm-4">
+
+									</div>
+									<!-- <div class="col-sm-4">
+										<div class="single-about-add-info">
+											<h3>website</h3>
+											<p>www.brownsine.com</p> -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-offset-1 col-sm-5">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<!--footer-copyright start-->
 		<footer id="footer-copyright" class="footer-copyright">
 			<div class="container">
