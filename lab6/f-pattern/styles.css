@@ -1,0 +1,106 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap; /* Thêm thuộc tính để chia cột thành dòng trên màn hình nhỏ */
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+#primary-content {
+    width: 100%; /* Full width on small screens */
+}
+
+#projects,
+#notifications {
+    width: 100%; /* Full width on small screens */
+    margin-bottom: 20px;
+}
+
+.animated {
+    opacity: 0;
+    transform: translateY(0);
+    transition: opacity 0.8s, transform 0.8s;
+}
+
+.animated.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#main-title {
+    color: #fff;
+    font-size: 2em;
+}
+
+#projects .project,
+#notifications .notification,
+#secondary-content p {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Styles */
+@media only screen and (min-width: 768px) {
+    /* Styles for tablets and larger screens */
+    #primary-content {
+        width: 70%;
+    }
+
+    #projects,
+    #notifications {
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    /* Styles for desktops and larger screens */
+    #primary-content {
+        width: 60%;
+    }
+
+    #projects,
+    #notifications {
+        width: 40%;
+    }
+}

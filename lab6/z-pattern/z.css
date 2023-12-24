@@ -1,0 +1,124 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-direction: column; /* Chuyển sang layout dọc cho thiết bị di động */
+}
+
+#primary-content,
+#secondary-content {
+    padding: 40px 0;
+}
+
+#primary-content {
+    background-color: #fff;
+    text-align: center;
+}
+
+#secondary-content {
+    background-color: #eee;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Styles */
+/* Responsive Styles */
+@media only screen and (min-width: 600px) {
+    /* Styles for small tablets and larger screens (min-width: 600px) */
+    main {
+        flex-direction: row; /* Chuyển về layout ngang cho tablet và màn hình lớn hơn */
+    }
+
+    #primary-content {
+        width: 60%;
+        margin-right: 20px;
+    }
+
+    #secondary-content {
+        width: 40%;
+    }
+    
+    .service,
+    #primary-content ul li,
+    #secondary-content ul li {
+        margin-bottom: 15px; /* Điều chỉnh khoảng cách giữa các mục */
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* Styles for tablets and larger screens (min-width: 768px) */
+    header {
+        padding: 30px 0; /* Tăng khoảng cách cho độ cao lớn hơn */
+    }
+
+    nav ul li {
+        margin-right: 30px; /* Tăng khoảng cách giữa các mục menu */
+    }
+}
+
+
+.animated {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s, transform 0.8s;
+}
+
+.animated.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service,
+#primary-content ul li,
+#secondary-content ul li {
+    list-style: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service:hover,
+#primary-content ul li:hover,
+#secondary-content ul li:hover {
+    transform: scale(1.05);
+}
