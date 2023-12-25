@@ -9,23 +9,49 @@
 <body>
     <div id="header">
         <div id="requirement">
-            <a href="lab6/f-pattern/ex1.html">Ex 1</a>
-            <a href="lab6/z-pattern/ex2.html">Ex 2</a>
+            <a href="#" onclick="showTab('ex1')">Ex 1</a>
+            <a href="#" onclick="showTab('ex2')">Ex 2</a>
         </div>
     </div>
 
-    <div class="xmas-tree">
-        <div class="star">
-            <i class="fa-solid fa-star"></i>
-        </div>
+    <div id="ex1" class="tab-content" style="display: block;">
+        <p>Implementation</p>
+        <div id="Implement-child" class="tabcontent-child" style="display: block;">
+            <iframe src="/lab6/f-pattern/ex1.html" frameborder="0"
+            style="width: 1024px;  height:450px; margin-top: 10px;"></iframe>
+            <p class="m-0" style="margin: 30px;">
+                <a href="/lab6/f-pattern/ex1.html "class="btn btn-secondary mt-1 py-3 px-5"
+                    style="margin: 50px 0px 10px 0px;padding: 19px 25px; text-decoration: none;" target="_blank">Review
+                    Page</a>
+            </p>
 
-        <div class="t1"></div>
-        <div class="t2"></div>
-        <div class="t3"></div>
-        <div class="stem"></div>
-        <div class="snow-ground"></div>
+            <p class="m-0" style="margin: 30px;">
+                <a href="/lab6/f-pattern/ex1.html "class="btn btn-secondary mt-1 py-3 px-5"
+                    style="margin: 50px 0px 10px 0px;padding: 19px 25px; text-decoration: none;" target="_blank" >Design</a>
+            </p>
+        </div>
     </div>
 
+    <div id="ex2" class="tab-content" style="display: none;">
+        <p>Implementation</p>
+        <div id="Implement-child" class="tabcontent-child" style="display: block;">
+            <iframe src="/lab6/z-pattern/ex2.html" frameborder="0"
+            style="width: 1024px;  height:450px; margin-top: 10px;"></iframe>
+            <p class="m-0" style="margin: 30px;">
+                <a href="/lab6/z-pattern/ex2.html "class="btn btn-secondary mt-1 py-3 px-5"
+                    style="margin: 50px 0px 10px 0px;padding: 19px 25px; text-decoration: none;" target="_blank">Review
+                    Page</a>
+            </p>
+
+            <p class="m-0" style="margin: 30px;">
+                <a href="/lab6/f-pattern/ex1.html "class="btn btn-secondary mt-1 py-3 px-5"
+                    style="margin: 50px 0px 10px 0px;padding: 19px 25px; text-decoration: none;" target="_blank" >Design</a>
+            </p>
+        </div>
+    </div>
+
+
+   
     <script src="/lab6/script.js"></script>
 </body>
 </html>
