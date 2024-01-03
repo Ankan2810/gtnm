@@ -15,6 +15,11 @@ for (i = 0; i < close.length; i++) {
   close[i].onclick = function() {
     var div = this.parentElement;
     div.style.display = "none";
+    
+    var listItems = JSON.parse(localStorage.getItem("listItems")) || [];
+    var index = listItems.indexOf(div.textContent.trim());
+    listItems.splice(index, 1);
+    localStorage.setItem("listItems", JSON.stringify(listItems));
   };
 }
 
@@ -31,6 +36,9 @@ function newElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
+  var listItems = JSON.parse(localStorage.getItem("listItems")) || [];
+  listItems.push(inputValue);
+  localStorage.setItem("listItems", JSON.stringify(listItems));
 
   li.appendChild(t);
   if (inputValue === '') {
@@ -46,16 +54,15 @@ function newElement() {
   span.appendChild(txt);
   li.appendChild(span);
 
-  document.getElementById("myInput").addEventListener("keyup", function(event) {
-    if (event.key === "Enter") {
-      addItem();
-    }
-  });
-
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
+    
+      var listItems = JSON.parse(localStorage.getItem("listItems")) || [];
+      var index = listItems.indexOf(div.textContent.trim());
+      listItems.splice(index, 1);
+      localStorage.setItem("listItems", JSON.stringify(listItems));
     };
   }
 }
