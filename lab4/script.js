@@ -1,88 +1,68 @@
-// app.js
-document.addEventListener("DOMContentLoaded", function () {
-    const signUpPage = document.getElementById("sign-up");
+// Create a "close" button and append it to each list item
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
 
-    // Tạo một trang chính của ứng dụng
-    function createSignUpPage() {
-        signUpPage.innerHTML = `
-        <div class="back"></div>
-        <div class="signUp">
-            <div class="content">
-    
-                <h2>Sign up</h2>
-                <h3>It's quick and easy.</h3>
-    
-                <!-- <div class="icon">
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-github"></i>
-                </div> -->
-            </div>
-            <form onsubmit="signUp()" >        
-                <div class="home">
-                    <div class="input1">
-                        <input  id="username" type="email" class="input-mail" autocomplete="off" required placeholder="Username">
-                    </div>
-    
-                    <div class="input2">
-                        <input  id="password" type="password" class="input-mail" autocomplete="off" required placeholder="Password">
-                    </div>
-    
-                    <div class="input3">
-                        <input  id="confirm-password" type="password" class="input-mail" autocomplete="off" required placeholder="Re-enter Password">
-                    </div>
-    
-                    <div class="input">
-                        <input type="submit" class="button" value="Sign Up">
-                    </div>
-                    </div>
-            </form>
-    
-        </div>
-        `;
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  };
+}
+
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+// Create a new list item when clicking on the "Add" button or pressing Enter key
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  document.getElementById("myInput").addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+      addItem();
     }
-    createSignUpPage();
+  });
 
-  function signUp(event) {
-        event.preventDefault();
-        var username = document.getElementById("username").value;
-        var password = document.getElementById("password").value;
-        var rePass = document.getElementById("confirm-password").value;
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    };
+  }
+}
 
-        if (password !== rePass) {
-            alert("Passwords do not match");
-            return;
-        } else {
-            alert("Sign up successful");
-            window.location.href = "/project/signInPage/index.html";
-        }
-
-        var user = {
-            username: username,
-            password: password,
-        };
-
-        localStorage.setItem(username, JSON.stringify(user));
-    }
-
-    function signIn(event) {
-        event.preventDefault();
-        var username = document.getElementById("username").value;
-        var password = document.getElementById("password").value;
-
-        var user = localStorage.getItem(username);
-        if (user === null) {
-            alert("Username does not exist");
-            return;
-        }
-
-        var data = JSON.parse(user);
-
-        if (username === data.username && password === data.password) {
-            alert("Login successful");
-        } else {
-            alert("Username or password is incorrect");
-        }
-    }
-})
+// Handle Enter key press in the input field
+document.getElementById("myInput").addEventListener("keyup", function(event) {
+  if (event.key === "Enter") {
+    newElement();
+  }
+});
