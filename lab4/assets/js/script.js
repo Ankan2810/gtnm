@@ -16,17 +16,11 @@ function makeSnow(){
 
 setInterval(makeSnow, 40);
 
-function showAndCloseTab(tabName) {
-    // Close all tabs
+function showTab(tabName) {
     var tabs = document.getElementsByClassName("tab-content");
     for (var i = 0; i < tabs.length; i++) {
         tabs[i].style.display = "none";
     }
-
-    // Show the specific tab
-    var tabElement = document.getElementById(tabName);
-    if (tabElement) {
-        tabElement.style.display = "block";
-    }
+    document.getElementById(tabName).style.display = "block";
 }
 
