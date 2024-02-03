@@ -911,7 +911,14 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
         display: flex;
         justify-content: center;
 }
-  
+
+#lab h3{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 75px;
+}
 #lab a{
     font-size: 24px;
         font-weight: 600;
@@ -951,10 +958,13 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     display: flex;
     justify-content: center;
     font-size: 25px;
+    text-transform: uppercase;
 }
 
 #res{
     font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 #result li{
     display: flex;
