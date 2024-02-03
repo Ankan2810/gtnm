@@ -734,6 +734,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
         11. Contact
 --------------------------------------*/
 .contact {
+    position: relative;
+    top: 200px;
     background: #f9fbfd;
     padding: 50px 0 100px;
 }
@@ -943,4 +945,21 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
+
+.result h3{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+
+#res{
+    font-size: 20px;
+}
+#result li{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+}
 /*========================Thank you=================
